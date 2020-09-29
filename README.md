@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/carloskotacho/goomer-api/blob/master/LICENSE">
-      <img src=""/>
+      <img src="https://img.shields.io/github/license/carloskotacho/goomer-api?color=%23009ca2&style=flat-square"/>
   </a>
 
   <a href="https://david-dm.org/carloskotacho/goomer-api">
