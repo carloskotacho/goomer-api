@@ -10,10 +10,10 @@
   </a>
 
   <a href="https://david-dm.org/carloskotacho/goomer-api">
-      <img src=""/>
+      <img src="https://img.shields.io/david/peer/carloskotacho/goomer-api?color=%23009ca2&logo=PROD&style=flat-square"/>
   </a>
 
   <a href="https://david-dm.org/carloskotacho/goomer-api?type=dev">
-      <img src=""/>
+      <img src="https://img.shields.io/david/dev/carloskotacho/goomer-api?color=%23009ca2&logo=DEV&style=flat-square"/>
   </a>
 </p>
