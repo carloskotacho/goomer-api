@@ -36,7 +36,7 @@ O layout da aplicação está disponível no Figma:
 ### Web
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="Softmoney" title="Login" src="" width="800px">
+  <!--img alt="goomer" title="Login" src="" width="800px"-->
 </p>
 
 ## ➤ Como executar o projeto
