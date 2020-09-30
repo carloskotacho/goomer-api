@@ -19,10 +19,10 @@
 </p>
 
 <p align="center">
- <a href="#-layout">Layout</a> • 
- <a href="#-sobre-o-projeto">Sobre o projeto</a> • 
- <a href="#-como-executar-o-projeto">Como executar</a> • 
- <a href="#-autor">Autor</a> • 
+ <a href="#-layout">Layout</a> •
+ <a href="#-sobre-o-projeto">Sobre o projeto</a> •
+ <a href="#-como-executar-o-projeto">Como executar</a> •
+ <a href="#-autor">Autor</a> •
  <a href="#user-content--licença">Licença</a>
 </p>
 
@@ -57,10 +57,10 @@ O layout da aplicação está disponível no Figma:
 
 - O cadastro do restaurante precisa ter os seguintes campos:
     - [ ] Foto do restaurante
-    - [ ] Nome do restaurante
-    - [ ] Endereço do restaurante
-    - [ ] Horários de funcionamento do restaurante (ex.: De Segunda à Sexta das 09h as 18h e de Sabado à Domingo das 11h as 20h).
-    
+    - [x] Nome do restaurante
+    - [x] Endereço do restaurante
+    - [x] Horários de funcionamento do restaurante (ex.: De Segunda à Sexta das 09h as 18h e de Sabado à Domingo das 11h as 20h).
+
 - O cadastro de produtos do restaurante precisa ter os seguintes campos:
     - [ ] Foto do produto
     - [ ] Nome do produto
@@ -72,8 +72,8 @@ O layout da aplicação está disponível no Figma:
         - [ ] Dias da semana e o horário em que o produto deve estar em promoção
 
 ##### Formato de horários
-- [ ] É necessário tratar os campos que indicam horários de funcionamento e horário para as promoções dos produtos. 
-- [ ] Os campos devem possuir o formato `HH:mm`. 
+- [ ] É necessário tratar os campos que indicam horários de funcionamento e horário para as promoções dos produtos.
+- [ ] Os campos devem possuir o formato `HH:mm`.
 - [ ] Os horários devem possuir intervalo mínimo de 15 minutos.
 
 ### ➤ Web
