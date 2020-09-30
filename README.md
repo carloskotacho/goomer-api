@@ -20,6 +20,7 @@
 
 <p align="center">
  <a href="#-layout">Layout</a> • 
+ <a href="#-sobre-o-projeto">Sobre o projeto</a> • 
  <a href="#-como-executar-o-projeto">Como executar</a> • 
  <a href="#-autor">Autor</a> • 
  <a href="#user-content--licença">Licença</a>
