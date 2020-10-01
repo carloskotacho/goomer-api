@@ -6,11 +6,10 @@ class Restaurant extends Model {
       {
         name: Sequelize.STRING,
         address: Sequelize.STRING,
-        opening_hours: Sequelize.STRING,
       },
       {
         sequelize,
-      },
+      }
     );
 
     return this;

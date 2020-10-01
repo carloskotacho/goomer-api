@@ -15,15 +15,23 @@ module.exports = {
         allowNull: true,
       },
       day_week: {
-        type: Sequelize.STRING,
+        type: Sequelize.ENUM(
+          'Segunda - Feira',
+          'Terça - Feira',
+          'Quarta - Feira',
+          'Quinta - Feira',
+          'Sexta - Feira',
+          'Sábado',
+          'Domingo'
+        ),
         allowNull: false,
       },
       open_hours: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.TIME,
         allowNull: false,
       },
       closed_hours: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.TIME,
         allowNull: false,
       },
       created_at: {
