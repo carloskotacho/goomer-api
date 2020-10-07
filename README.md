@@ -59,7 +59,7 @@ O layout da aplicação está disponível no Figma:
     - [ ] Foto do restaurante
     - [x] Nome do restaurante
     - [x] Endereço do restaurante
-    - [ ] Horários de funcionamento do restaurante (ex.: De Segunda à Sexta das 09h as 18h e de Sabado à Domingo das 11h as 20h).
+    - [x] Horários de funcionamento do restaurante (ex.: De Segunda à Sexta das 09h as 18h e de Sabado à Domingo das 11h as 20h).
 
 - O cadastro de produtos do restaurante precisa ter os seguintes campos:
     - [ ] Foto do produto
