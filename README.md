@@ -45,8 +45,8 @@ O layout da aplicação está disponível no Figma:
 ### Desafio
 
 - A sua API deverá ser capaz de:
-    - [ ] Listar todos os restaurantes
-    - [ ] Cadastrar novos restaurantes
+    - [x] Listar todos os restaurantes
+    - [x] Cadastrar novos restaurantes
     - [ ] Listar os dados de um restaurante
     - [ ] Alterar os dados um restaurante
     - [ ] Excluir um restaurante
