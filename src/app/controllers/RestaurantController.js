@@ -4,11 +4,21 @@ class RestaurantController {
   async index(req, res) {
     const restaurants = await Restaurant.findAll({
       attributes: {
-        exclude: ['name', 'createdAt', 'updatedAt'],
+        exclude: ['createdAt', 'updatedAt'],
       },
     });
 
     return res.json(restaurants);
+  }
+
+  async show(req, res) {
+    const restaurant = await Restaurant.findByPk(req.params.id, {
+      attributes: {
+        exclude: ['createdAt', 'updatedAt'],
+      },
+    });
+
+    return res.json(restaurant);
   }
 
   async store(req, res) {
@@ -21,7 +31,6 @@ class RestaurantController {
     });
   }
 
-  // TODO: index(listagem de usuários)
   // TODO: show(exibir único usuário)
   // TODO: update
   // TODO: delete
