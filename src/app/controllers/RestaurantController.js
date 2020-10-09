@@ -18,6 +18,10 @@ class RestaurantController {
       },
     });
 
+    if (!restaurant) {
+      return res.status(404).json({ error: 'Restaurant not found' });
+    }
+
     return res.json(restaurant);
   }
 
