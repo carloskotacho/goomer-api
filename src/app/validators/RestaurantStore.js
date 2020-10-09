@@ -1,5 +1,3 @@
-import { BAD_REQUEST } from 'http-status-codes';
-
 import * as Yup from 'yup';
 
 export default async (req, res, next) => {
@@ -14,7 +12,7 @@ export default async (req, res, next) => {
     return next();
   } catch (err) {
     return res
-      .status(BAD_REQUEST)
+      .status(400)
       .json({ error: 'Validations fails', messages: err.inner });
   }
 };

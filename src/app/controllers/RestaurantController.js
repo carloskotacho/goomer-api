@@ -1,4 +1,3 @@
-import { NOT_FOUND, NO_CONTENT } from 'http-status-codes';
 import Restaurant from '../models/Restaurant';
 
 class RestaurantController {
@@ -20,7 +19,7 @@ class RestaurantController {
     });
 
     if (!restaurant) {
-      return res.status(NOT_FOUND).json({ error: 'Restaurant not found' });
+      return res.status(404).json({ error: 'Restaurant not found' });
     }
 
     return res.json(restaurant);
@@ -40,7 +39,7 @@ class RestaurantController {
     const restaurant = await Restaurant.findByPk(req.params.id);
 
     if (!restaurant) {
-      return res.status(NOT_FOUND).json({ error: 'Restaurant not found' });
+      return res.status(404).json({ error: 'Restaurant not found' });
     }
 
     const { id, name } = await restaurant.update(req.body);
@@ -52,12 +51,12 @@ class RestaurantController {
     const restaurant = await Restaurant.findByPk(req.params.id);
 
     if (!restaurant) {
-      return res.status(NOT_FOUND).json({ error: 'Restaurant not found' });
+      return res.status(404).json({ error: 'Restaurant not found' });
     }
 
     await restaurant.destroy();
 
-    return res.status(NO_CONTENT).json();
+    return res.status(204).json();
   }
 }
 
