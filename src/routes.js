@@ -8,6 +8,7 @@ const routes = new Router();
 routes.get('/restaurants', RestaurantController.index);
 routes.get('/restaurants/:id', RestaurantController.show);
 routes.post('/restaurants', RestaurantController.store);
+routes.put('/restaurants/:id', RestaurantController.update);
 
 routes.get('/schedules', ScheduleController.index);
 

@@ -36,7 +36,17 @@ class RestaurantController {
     });
   }
 
-  // TODO: update
+  async update(req, res) {
+    const restaurant = await Restaurant.findByPk(req.params.id);
+
+    if (!restaurant) {
+      return res.status(NOT_FOUND).json({ error: 'Restaurant not found' });
+    }
+
+    const { id, name } = await restaurant.update(req.body);
+
+    return res.json({ id, name });
+  }
   // TODO: delete
 }
 
