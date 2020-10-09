@@ -1,3 +1,4 @@
+import { NOT_FOUND } from 'http-status-codes';
 import Restaurant from '../models/Restaurant';
 
 class RestaurantController {
@@ -19,7 +20,7 @@ class RestaurantController {
     });
 
     if (!restaurant) {
-      return res.status(404).json({ error: 'Restaurant not found' });
+      return res.status(NOT_FOUND).json({ error: 'Restaurant not found' });
     }
 
     return res.json(restaurant);
@@ -35,7 +36,6 @@ class RestaurantController {
     });
   }
 
-  // TODO: show(exibir único usuário)
   // TODO: update
   // TODO: delete
 }
