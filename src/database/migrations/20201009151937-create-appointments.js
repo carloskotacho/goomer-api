@@ -1,6 +1,6 @@
 module.exports = {
   up: (queryInterface, Sequelize) =>
-    queryInterface.createTable('schedules', {
+    queryInterface.createTable('appointments', {
       id: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -18,11 +18,11 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      open_hours: {
+      start: {
         type: Sequelize.TIME,
         allowNull: false,
       },
-      closed_hours: {
+      end: {
         type: Sequelize.TIME,
         allowNull: false,
       },
@@ -36,5 +36,5 @@ module.exports = {
       },
     }),
 
-  down: (queryInterface) => queryInterface.dropTable('schedules'),
+  down: (queryInterface) => queryInterface.dropTable('appointments'),
 };

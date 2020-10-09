@@ -1,12 +1,12 @@
 import Sequelize, { Model } from 'sequelize';
 
-class Schedule extends Model {
+class Appointment extends Model {
   static init(sequelize) {
     super.init(
       {
         day_week: Sequelize.STRING,
-        open_hours: Sequelize.TIME,
-        closed_hours: Sequelize.TIME,
+        start: Sequelize.TIME,
+        end: Sequelize.TIME,
       },
       {
         sequelize,
@@ -24,4 +24,4 @@ class Schedule extends Model {
   }
 }
 
-export default Schedule;
+export default Appointment;
