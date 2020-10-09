@@ -1,3 +1,5 @@
+import { NOT_FOUND } from 'http-status-codes';
+
 import Restaurant from '../models/Restaurant';
 import Schedule from '../models/Schedule';
 
@@ -17,6 +19,17 @@ class ScheduleController {
     });
 
     return res.json(schedules);
+  }
+
+  async store(req, res) {
+    const restaurant = await Restaurant.findByPk(req.body.restaurant_id);
+
+    if (!restaurant) {
+      return res.status(NOT_FOUND).json({ error: 'Restaurant not found' });
+    }
+
+    // TODO: open_hours
+    // TODO: closed_hours
   }
 }
 
