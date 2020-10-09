@@ -9,6 +9,7 @@ routes.get('/restaurants', RestaurantController.index);
 routes.get('/restaurants/:id', RestaurantController.show);
 routes.post('/restaurants', RestaurantController.store);
 routes.put('/restaurants/:id', RestaurantController.update);
+routes.delete('/restaurants/:id', RestaurantController.delete);
 
 routes.get('/schedules', ScheduleController.index);
 

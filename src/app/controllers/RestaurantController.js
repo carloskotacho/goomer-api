@@ -1,4 +1,4 @@
-import { NOT_FOUND } from 'http-status-codes';
+import { NOT_FOUND, NO_CONTENT } from 'http-status-codes';
 import Restaurant from '../models/Restaurant';
 
 class RestaurantController {
@@ -47,7 +47,18 @@ class RestaurantController {
 
     return res.json({ id, name });
   }
-  // TODO: delete
+
+  async delete(req, res) {
+    const restaurant = await Restaurant.findByPk(req.params.id);
+
+    if (!restaurant) {
+      return res.status(NOT_FOUND).json({ error: 'Restaurant not found' });
+    }
+
+    await restaurant.destroy();
+
+    return res.status(NO_CONTENT).json();
+  }
 }
 
 export default new RestaurantController();
