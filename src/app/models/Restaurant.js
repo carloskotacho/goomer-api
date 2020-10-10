@@ -6,6 +6,7 @@ class Restaurant extends Model {
       {
         name: Sequelize.STRING,
         address: Sequelize.STRING,
+        schedules: Sequelize.ARRAY(Sequelize.STRING),
       },
       {
         sequelize,
