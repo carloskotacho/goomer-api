@@ -18,5 +18,6 @@ routes.put('/api/restaurants/:id/v1', RestaurantController.update);
 routes.delete('/api/restaurants/:id/v1', RestaurantController.delete);
 
 routes.get('/api/products/v1', ProductController.index);
+routes.get('/api/products/restaurant/:id/v1', ProductController.show);
 
 module.exports = routes;
