@@ -50,6 +50,7 @@ O layout da aplicação está disponível no Figma:
     - [x] Listar os dados de um restaurante
     - [x] Alterar os dados um restaurante
     - [x] Excluir um restaurante
+    - [x] Listar todos os produtos
     - [ ] Listar todos os produtos de um restautante
     - [ ] Criar um produto de um restaurante
     - [ ] Alterar um produto de um restaurante
