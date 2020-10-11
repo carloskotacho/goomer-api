@@ -31,11 +31,11 @@ module.exports = {
         allowNull: true,
       },
       day_week: {
-        type: Sequelize.STRING,
+        type: Sequelize.ARRAY(Sequelize.STRING),
         allowNull: true,
       },
       promotion_schedules: {
-        type: Sequelize.STRING,
+        type: Sequelize.ARRAY(Sequelize.STRING),
         allowNull: true,
       },
       created_at: {
