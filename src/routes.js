@@ -1,6 +1,7 @@
 import { Router } from 'express';
 
 import RestaurantController from './app/controllers/RestaurantController';
+import ProductController from './app/controllers/ProductController';
 
 import validateRestaurantStore from './app/validators/RestaurantStore';
 
@@ -15,5 +16,7 @@ routes.post(
 );
 routes.put('/api/restaurants/:id/v1', RestaurantController.update);
 routes.delete('/api/restaurants/:id/v1', RestaurantController.delete);
+
+routes.get('/api/products/v1', ProductController.index);
 
 module.exports = routes;
