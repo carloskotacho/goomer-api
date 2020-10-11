@@ -9,8 +9,8 @@ class Product extends Model {
         category: Sequelize.STRING,
         promotion: Sequelize.VIRTUAL,
         description: Sequelize.STRING,
-        day_week: Sequelize.STRING,
-        promotion_schedules: Sequelize.STRING,
+        day_week: Sequelize.ARRAY(Sequelize.STRING),
+        promotion_schedules: Sequelize.ARRAY(Sequelize.STRING),
       },
       {
         sequelize,
