@@ -32,7 +32,7 @@ class ProductController {
 
     const products = await Product.findAll({
       where: {
-        id: restaurantId,
+        restaurant_id: restaurantId,
       },
       attributes: {
         exclude: ['restaurant_id', 'createdAt', 'updatedAt'],
