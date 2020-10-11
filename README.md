@@ -64,13 +64,13 @@ O layout da aplicação está disponível no Figma:
 
 - O cadastro de produtos do restaurante precisa ter os seguintes campos:
     - [ ] Foto do produto
-    - [ ] Nome do produto
-    - [ ] Preço do produto
-    - [ ] Categoria do produto (ex.: Doce, Salgados, Sucos...)
+    - [x] Nome do produto
+    - [x] Preço do produto
+    - [x] Categoria do produto (ex.: Doce, Salgados, Sucos...)
     - [ ] Quando o Produto for colocado em promoção, precisa ter os seguintes campos:
-        - [ ] Descrição para a promoção do produto (ex.: Chopp pela metade do preço)
-        - [ ] Preço promocional
-        - [ ] Dias da semana e o horário em que o produto deve estar em promoção
+        - [x] Descrição para a promoção do produto (ex.: Chopp pela metade do preço)
+        - [x] Preço promocional
+        - [x] Dias da semana e o horário em que o produto deve estar em promoção
 
 ##### Formato de horários
 - [ ] É necessário tratar os campos que indicam horários de funcionamento e horário para as promoções dos produtos.
