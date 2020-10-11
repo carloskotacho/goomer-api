@@ -1,0 +1,31 @@
+import Sequelize, { Model } from 'sequelize';
+
+class Product extends Model {
+  static init(sequelize) {
+    super.init(
+      {
+        name: Sequelize.STRING,
+        price: Sequelize.STRING,
+        category: Sequelize.STRING,
+        promotion: Sequelize.VIRTUAL,
+        description: Sequelize.STRING,
+        day_week: Sequelize.STRING,
+        promotion_schedules: Sequelize.STRING,
+      },
+      {
+        sequelize,
+      }
+    );
+
+    return this;
+  }
+
+  static associate(models) {
+    this.belongsTo(models.Restaurant, {
+      foreignKey: 'restaurant_id',
+      as: 'restaurant',
+    });
+  }
+}
+
+export default Product;
