@@ -57,7 +57,7 @@ O layout da aplicação está disponível no Figma:
     - [x] Excluir um produto de um restaurante
 
 - O cadastro do restaurante precisa ter os seguintes campos:
-    - [ ] Foto do restaurante
+    - [x] Foto do restaurante
     - [x] Nome do restaurante
     - [x] Endereço do restaurante
     - [x] Horários de funcionamento do restaurante (ex.: De Segunda à Sexta das 09h as 18h e de Sabado à Domingo das 11h as 20h).
