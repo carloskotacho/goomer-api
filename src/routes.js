@@ -27,5 +27,6 @@ routes.put(
   validateProductUpdate,
   ProductController.update
 );
+routes.delete('/api/products/:id/v1', ProductController.delete);
 
 module.exports = routes;
