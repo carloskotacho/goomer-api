@@ -72,6 +72,42 @@ class ProductController {
       promotion_schedules,
     });
   }
+
+  async update(req, res) {
+    const product = await Product.findByPk(req.params.id);
+
+    if (!product) {
+      return res.status(404).json({ error: 'Product not found' });
+    }
+
+    const restaurant = await Restaurant.findByPk(req.body.restaurant_id);
+
+    if (!restaurant) {
+      return res.status(404).json({ error: 'Restaurant not found' });
+    }
+
+    const {
+      id,
+      restaurant_id,
+      name,
+      price,
+      category,
+      description,
+      day_week,
+      promotion_schedules,
+    } = await product.update(req.body);
+
+    return res.json({
+      id,
+      restaurant_id,
+      name,
+      price,
+      category,
+      description,
+      day_week,
+      promotion_schedules,
+    });
+  }
 }
 
 export default new ProductController();
