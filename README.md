@@ -52,7 +52,7 @@ O layout da aplicação está disponível no Figma:
     - [x] Excluir um restaurante
     - [x] Listar todos os produtos
     - [x] Listar todos os produtos de um restautante
-    - [ ] Criar um produto de um restaurante
+    - [x] Criar um produto de um restaurante
     - [ ] Alterar um produto de um restaurante
     - [ ] Excluir um produto de um restaurante
 
@@ -67,7 +67,7 @@ O layout da aplicação está disponível no Figma:
     - [x] Nome do produto
     - [x] Preço do produto
     - [x] Categoria do produto (ex.: Doce, Salgados, Sucos...)
-    - [ ] Quando o Produto for colocado em promoção, precisa ter os seguintes campos:
+    - [x] Quando o Produto for colocado em promoção, precisa ter os seguintes campos:
         - [x] Descrição para a promoção do produto (ex.: Chopp pela metade do preço)
         - [x] Preço promocional
         - [x] Dias da semana e o horário em que o produto deve estar em promoção
