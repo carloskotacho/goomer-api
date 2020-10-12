@@ -63,7 +63,7 @@ O layout da aplicação está disponível no Figma:
     - [x] Horários de funcionamento do restaurante (ex.: De Segunda à Sexta das 09h as 18h e de Sabado à Domingo das 11h as 20h).
 
 - O cadastro de produtos do restaurante precisa ter os seguintes campos:
-    - [ ] Foto do produto
+    - [x] Foto do produto
     - [x] Nome do produto
     - [x] Preço do produto
     - [x] Categoria do produto (ex.: Doce, Salgados, Sucos...)
