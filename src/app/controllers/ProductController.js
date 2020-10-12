@@ -50,6 +50,28 @@ class ProductController {
 
     return res.json(products);
   }
+
+  async store(req, res) {
+    const {
+      id,
+      name,
+      price,
+      category,
+      description,
+      day_week,
+      promotion_schedules,
+    } = await Product.create(req.body);
+
+    return res.json({
+      id,
+      name,
+      price,
+      category,
+      description,
+      day_week,
+      promotion_schedules,
+    });
+  }
 }
 
 export default new ProductController();
