@@ -1,13 +1,17 @@
 import { Router } from 'express';
+import multer from 'multer';
+import multerConfig from './config/multer';
 
 import RestaurantController from './app/controllers/RestaurantController';
 import ProductController from './app/controllers/ProductController';
+import FileController from './app/controllers/FileController';
 
 import validateRestaurantStore from './app/validators/RestaurantStore';
 import validateProductStore from './app/validators/ProductStore';
 import validateProductUpdate from './app/validators/ProductUpdate';
 
 const routes = new Router();
+const upload = multer(multerConfig);
 
 routes.get('/api/restaurants/v1', RestaurantController.index);
 routes.get('/api/restaurants/:id/v1', RestaurantController.show);
@@ -28,5 +32,7 @@ routes.put(
   ProductController.update
 );
 routes.delete('/api/products/:id/v1', ProductController.delete);
+
+routes.post('/api/files/v1', upload.single('file'), FileController.store);
 
 module.exports = routes;
