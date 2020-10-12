@@ -92,6 +92,17 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
 #### 🧭 Rodando a aplicação web (Frontend)
 
+1. Renomear o arquivo *.env.example* para *.env*;
+2. Criar um database com um nome qualquer *(goomerdb)*
+3. Adicionar as credenciais do seu *database* no arquivo *.env*, por exemplo:
+
+```js
+DB_HOST=localhost
+DB_USER=postgres
+DB_PASS=qwerty
+DB_NAME=goomerdb
+```
+
 ```bash
 
 # Clone este repositório
@@ -103,9 +114,37 @@ $ cd goomer-api
 # Instale as dependências
 $ yarn
 
+# Rodar migrations
+$ yarn sequelize db:migrate
+
+# Rodar seeds
+$ yarn sequelize db:seed:all
+
 # Execute a aplicação
 $ yarn dev
 ```
+
+## ➤ Usando
+
+Por fim, teste as requisições abaixo, utilizando algum sistema que teste serviços RESTful *([Insomnia](https://www.postman.com/), [Postman](https://www.postman.com/), etc...)*.
+
+**Restaurante**
+
+| Verbo HTTP | URL | Descrição |
+|--|--|--|
+| GET | [http://localhost:3333/api/restaurants/v1]() | Listar todos os restaurantes |
+| POST | [http://localhost:3333/api/restaurants/v1]() | Cadastrar novos restaurantes |
+| GET | [http://localhost:3333/api/restaurants/:id/v1]() | Listar os dados de um restaurante |
+| PUT | [http://localhost:3333/api/restaurants/:id/v1]() | Alterar os dados um restaurante |
+| DELETE | [http://localhost:3333/api/restaurants/:id/v1]() | Excluir um restaurante |
+
+**Produtos**
+
+| Verbo HTTP | URL | Descrição |
+|--|--|--|
+| GET | [http://localhost:3333/api/products/v1]() | Listar todos os produtos |
+| GET | [http://localhost:3333/api/products/restaurant/:id/v1]() | Listar todos os produtos de um restautante |
+| POST | [http://localhost:3333/api/products/v1]() | Criar um produto |
 
 ## ➤ Autor
 
