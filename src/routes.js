@@ -4,6 +4,7 @@ import RestaurantController from './app/controllers/RestaurantController';
 import ProductController from './app/controllers/ProductController';
 
 import validateRestaurantStore from './app/validators/RestaurantStore';
+import validateProductStore from './app/validators/ProductStore';
 
 const routes = new Router();
 
@@ -19,5 +20,6 @@ routes.delete('/api/restaurants/:id/v1', RestaurantController.delete);
 
 routes.get('/api/products/v1', ProductController.index);
 routes.get('/api/products/restaurant/:id/v1', ProductController.show);
+routes.post('/api/products/v1', validateProductStore, ProductController.store);
 
 module.exports = routes;
