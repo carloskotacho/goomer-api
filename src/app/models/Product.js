@@ -25,6 +25,7 @@ class Product extends Model {
       foreignKey: 'restaurant_id',
       as: 'restaurant',
     });
+    this.belongsTo(models.File, { foreignKey: 'avatar_id' });
   }
 }
 
