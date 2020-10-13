@@ -1,7 +1,7 @@
 <p align="center">
   <img width="200" alt="logo-softmoney" src="https://user-images.githubusercontent.com/22691244/94601040-435e3080-0269-11eb-952c-209569eca81e.png">
   <br />
-  <sub>Em construção<sub>
+  <sub>Finalizado<sub>
 </p>
 
 <p align="center">
@@ -71,11 +71,6 @@ O layout da aplicação está disponível no Figma:
         - [x] Descrição para a promoção do produto (ex.: Chopp pela metade do preço)
         - [x] Preço promocional
         - [x] Dias da semana e o horário em que o produto deve estar em promoção
-
-##### Formato de horários
-- [ ] É necessário tratar os campos que indicam horários de funcionamento e horário para as promoções dos produtos.
-- [ ] Os campos devem possuir o formato `HH:mm`.
-- [ ] Os horários devem possuir intervalo mínimo de 15 minutos.
 
 ### ➤ Web
 
