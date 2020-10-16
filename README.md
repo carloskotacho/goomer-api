@@ -85,7 +85,7 @@ O layout da aplicação está disponível no Figma:
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) / [Yarn](https://yarnpkg.com/getting-started/install).
 
-#### 🧭 Rodando a aplicação web (Frontend)
+#### 🧭 Rodando a aplicação (Backend)
 
 1. Renomear o arquivo *.env.example* para *.env*;
 2. Criar um database com um nome qualquer *(goomerdb)*
