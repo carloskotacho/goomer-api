@@ -1,8 +1,17 @@
+import { Op } from 'sequelize';
+
 import Restaurant from '../models/Restaurant';
 
 class RestaurantController {
   async index(req, res) {
+    const { search } = req.query;
+
     const restaurants = await Restaurant.findAll({
+      where: {
+        name: {
+          [Op.iLike]: `%${search}%`,
+        },
+      },
       attributes: {
         exclude: ['createdAt', 'updatedAt'],
       },
