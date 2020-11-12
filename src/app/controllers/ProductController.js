@@ -1,9 +1,27 @@
+import { Op } from 'sequelize';
+
 import Product from '../models/Product';
 import Restaurant from '../models/Restaurant';
 
 class ProductController {
   async index(req, res) {
+    const { search } = req.query;
+
     const products = await Product.findAll({
+      where: {
+        [Op.or]: [
+          {
+            name: {
+              [Op.iLike]: `%${search}%`,
+            },
+          },
+          {
+            category: {
+              [Op.iLike]: `%${search}%`,
+            },
+          },
+        ],
+      },
       attributes: {
         exclude: ['restaurant_id', 'createdAt', 'updatedAt'],
       },
