@@ -5,7 +5,7 @@ import Restaurant from '../models/Restaurant';
 
 class ProductController {
   async index(req, res) {
-    const { search } = req.query;
+    const { search = '' } = req.query;
 
     const products = await Product.findAll({
       where: {
