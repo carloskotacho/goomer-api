@@ -5,7 +5,7 @@ import Restaurant from '../models/Restaurant';
 
 class ProductController {
   async index(req, res) {
-    const { search = '' } = req.query;
+    const { search = '', page = 1 } = req.query;
 
     const products = await Product.findAll({
       where: {
@@ -22,6 +22,8 @@ class ProductController {
           },
         ],
       },
+      limit: 5,
+      offset: (page - 1) * 5,
       attributes: {
         exclude: ['restaurant_id', 'createdAt', 'updatedAt'],
       },

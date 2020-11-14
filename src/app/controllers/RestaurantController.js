@@ -13,7 +13,7 @@ class RestaurantController {
         },
       },
       limit: 5,
-      offset: (page - 1) * 2,
+      offset: (page - 1) * 5,
       attributes: {
         exclude: ['createdAt', 'updatedAt'],
       },
