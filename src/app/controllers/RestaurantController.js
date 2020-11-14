@@ -4,7 +4,7 @@ import Restaurant from '../models/Restaurant';
 
 class RestaurantController {
   async index(req, res) {
-    const { search = '' } = req.query;
+    const { search = '', page = 1 } = req.query;
 
     const restaurants = await Restaurant.findAll({
       where: {
@@ -12,6 +12,8 @@ class RestaurantController {
           [Op.iLike]: `%${search}%`,
         },
       },
+      limit: 5,
+      offset: (page - 1) * 2,
       attributes: {
         exclude: ['createdAt', 'updatedAt'],
       },
