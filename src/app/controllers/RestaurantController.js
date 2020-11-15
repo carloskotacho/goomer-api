@@ -6,7 +6,7 @@ class RestaurantController {
   async index(req, res) {
     const { search = '', page = 1 } = req.query;
 
-    const restaurants = await Restaurant.findAll({
+    const restaurants = await Restaurant.findAndCountAll({
       where: {
         name: {
           [Op.iLike]: `%${search}%`,

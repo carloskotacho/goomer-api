@@ -7,7 +7,7 @@ class ProductController {
   async index(req, res) {
     const { search = '', page = 1 } = req.query;
 
-    const products = await Product.findAll({
+    const products = await Product.findAndCountAll({
       where: {
         [Op.or]: [
           {
