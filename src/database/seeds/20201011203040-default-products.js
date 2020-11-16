@@ -4,7 +4,7 @@ module.exports = {
       {
         restaurant_id: 1,
         name: 'Chopp',
-        price: '10,00',
+        price: '10',
         category: 'Doces',
         description: 'Chopp pela metade do preço',
         day_week: ['Sábado', 'Domingo'],
@@ -15,7 +15,7 @@ module.exports = {
       {
         restaurant_id: 1,
         name: 'Empadão',
-        price: '4,50',
+        price: '4.50',
         category: 'Salgado',
         created_at: new Date(),
         updated_at: new Date(),
@@ -23,7 +23,7 @@ module.exports = {
       {
         restaurant_id: 2,
         name: 'Marmitex',
-        price: '10,00',
+        price: '10',
         category: 'Outros',
         description: 'Marmitex pela metade do preço',
         day_week: ['Segunda', 'Quarta', 'Sexta'],
@@ -34,7 +34,7 @@ module.exports = {
       {
         restaurant_id: 2,
         name: 'Suco de laranja',
-        price: '2,00',
+        price: '2',
         category: 'Suco',
         created_at: new Date(),
         updated_at: new Date(),
@@ -42,7 +42,7 @@ module.exports = {
       {
         restaurant_id: 3,
         name: 'Biffet livre',
-        price: '15,00',
+        price: '15',
         category: 'Outros',
         description: 'Todas as Quartas 40% off',
         day_week: ['Quarta'],
