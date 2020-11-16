@@ -28,6 +28,6 @@ module.exports = {
   },
 
   down: (queryInterface) => {
-    return queryInterface.cropTable('files');
+    return queryInterface.dropTable('files');
   },
 };
