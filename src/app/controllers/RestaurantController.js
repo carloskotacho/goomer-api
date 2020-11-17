@@ -1,5 +1,6 @@
 import { Op } from 'sequelize';
 
+import File from '../models/File';
 import Restaurant from '../models/Restaurant';
 
 class RestaurantController {
@@ -15,8 +16,15 @@ class RestaurantController {
       limit: 5,
       offset: (page - 1) * 5,
       attributes: {
-        exclude: ['createdAt', 'updatedAt'],
+        exclude: ['avatar_id', 'createdAt', 'updatedAt'],
       },
+      include: [
+        {
+          model: File,
+          as: 'avatar',
+          attributes: ['name', 'path', 'url'],
+        },
+      ],
     });
 
     return res.json(restaurants);

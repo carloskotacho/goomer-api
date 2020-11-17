@@ -1,5 +1,6 @@
 import { Op } from 'sequelize';
 
+import File from '../models/File';
 import Product from '../models/Product';
 import Restaurant from '../models/Restaurant';
 
@@ -25,13 +26,20 @@ class ProductController {
       limit: 5,
       offset: (page - 1) * 5,
       attributes: {
-        exclude: ['restaurant_id', 'createdAt', 'updatedAt'],
+        exclude: ['avatar_id', 'restaurant_id', 'createdAt', 'updatedAt'],
       },
-      include: {
-        model: Restaurant,
-        as: 'restaurant',
-        attributes: ['id', 'name'],
-      },
+      include: [
+        {
+          model: Restaurant,
+          as: 'restaurant',
+          attributes: ['id', 'name'],
+        },
+        {
+          model: File,
+          as: 'avatar',
+          attributes: ['name', 'path', 'url'],
+        },
+      ],
     });
 
     return res.json(products);
