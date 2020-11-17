@@ -2,6 +2,7 @@ import { Op } from 'sequelize';
 
 import File from '../models/File';
 import Restaurant from '../models/Restaurant';
+import Product from '../models/Product';
 
 class RestaurantController {
   async index(req, res) {
@@ -84,6 +85,15 @@ class RestaurantController {
 
   async delete(req, res) {
     const restaurant = await Restaurant.findByPk(req.params.id);
+    const product = await Product.findOne({
+      where: { restaurant_id: restaurant.id },
+    });
+
+    if (product) {
+      return res
+        .status(400)
+        .json({ error: 'There are products associated with this restaurant' });
+    }
 
     if (!restaurant) {
       return res.status(404).json({ error: 'Restaurant not found' });

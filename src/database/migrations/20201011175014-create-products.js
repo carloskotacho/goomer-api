@@ -12,7 +12,6 @@ module.exports = {
         references: { model: 'restaurants', key: 'id' },
         onUpdate: 'CASCADE',
         onDelete: 'RESTRICT',
-        allowNull: true,
       },
       name: {
         type: Sequelize.STRING,
