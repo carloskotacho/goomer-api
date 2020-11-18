@@ -42,21 +42,10 @@ class RestaurantController {
       return res.status(404).json({ error: 'Restaurant not found' });
     }
 
-    let schedules = ``;
-
-    if (restaurant.schedules.length === 4) {
-      schedules =
-        `De Segunda à Sexta das ` +
-        `${restaurant.schedules[0]}h as ` +
-        `${restaurant.schedules[1]}h e de Sabado à Domingo das ` +
-        `${restaurant.schedules[2]}h as ` +
-        `${restaurant.schedules[3]}h`;
-    }
-
     return res.json({
       name: restaurant.name,
       address: restaurant.address,
-      schedules,
+      schedules: restaurant.schedules,
     });
   }
 

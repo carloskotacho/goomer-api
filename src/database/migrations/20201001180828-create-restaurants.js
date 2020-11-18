@@ -16,7 +16,7 @@ module.exports = {
         allowNull: false,
       },
       schedules: {
-        type: Sequelize.ARRAY(Sequelize.STRING),
+        type: Sequelize.STRING,
         allowNull: false,
       },
       created_at: {

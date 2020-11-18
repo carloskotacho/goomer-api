@@ -6,12 +6,35 @@ class Restaurant extends Model {
       {
         name: Sequelize.STRING,
         address: Sequelize.STRING,
-        schedules: Sequelize.ARRAY(Sequelize.STRING),
+        week_opening_time: Sequelize.VIRTUAL,
+        week_closing_time: Sequelize.VIRTUAL,
+        weekend_opening_time: Sequelize.VIRTUAL,
+        weekend_closing_time: Sequelize.VIRTUAL,
+        schedules: Sequelize.STRING,
       },
       {
         sequelize,
       }
     );
+
+    this.addHook('beforeSave', async (restaurant) => {
+      const weekOpeningTime = restaurant.week_opening_time;
+      const weekClosingTime = restaurant.week_closing_time;
+      const weekendOpeningTime = restaurant.weekend_opening_time;
+      const weekendClosingTime = restaurant.weekend_closing_time;
+
+      if (
+        weekOpeningTime &&
+        weekClosingTime &&
+        weekendOpeningTime &&
+        weekendClosingTime
+      ) {
+        restaurant.schedules =
+          `De Segunda à Sexta das ${weekOpeningTime}h as` +
+          `${weekClosingTime}h e de Sábado à Domingo das ${weekendOpeningTime}h` +
+          ` as ${weekClosingTime}h`;
+      }
+    });
 
     return this;
   }
