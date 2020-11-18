@@ -32,7 +32,7 @@ class Restaurant extends Model {
         restaurant.schedules =
           `De Segunda à Sexta das ${weekOpeningTime} as` +
           ` ${weekClosingTime} e de Sábado à Domingo das ${weekendOpeningTime}` +
-          ` as ${weekClosingTime}`;
+          ` as ${weekendClosingTime}`;
       }
     });
 
