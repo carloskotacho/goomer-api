@@ -25,21 +25,15 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      promotion: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
+        allowNull: false,
+      },
       promotion_schedules: {
         type: Sequelize.STRING,
-        allowNull: true,
-      },
-      promotional_price: {
-        type: Sequelize.STRING,
-        allowNull: true,
-      },
-      promotion_start_time: {
-        type: Sequelize.STRING,
-        allowNull: true,
-      },
-      promotion_end_time: {
-        type: Sequelize.STRING,
-        allowNull: true,
+        defaultValue: 'Não há promoção',
+        allowNull: false,
       },
       created_at: {
         type: Sequelize.DATE,
