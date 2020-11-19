@@ -85,9 +85,13 @@ class ProductController {
       name,
       price,
       category,
+      promotion,
       description,
+      promotional_price,
       day_week,
       promotion_schedules,
+      promotion_start_time,
+      promotion_end_time,
     } = await Product.create(req.body);
 
     return res.json({
@@ -95,9 +99,13 @@ class ProductController {
       name,
       price,
       category,
+      promotion,
       description,
+      promotional_price,
       day_week,
       promotion_schedules,
+      promotion_start_time,
+      promotion_end_time,
     });
   }
 
