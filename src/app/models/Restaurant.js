@@ -18,10 +18,12 @@ class Restaurant extends Model {
     );
 
     this.addHook('beforeSave', async (restaurant) => {
-      const weekOpeningTime = restaurant.week_opening_time;
-      const weekClosingTime = restaurant.week_closing_time;
-      const weekendOpeningTime = restaurant.weekend_opening_time;
-      const weekendClosingTime = restaurant.weekend_closing_time;
+      const {
+        week_opening_time: weekOpeningTime,
+        week_closing_time: weekClosingTime,
+        weekend_opening_time: weekendOpeningTime,
+        weekend_closing_time: weekendClosingTime,
+      } = restaurant;
 
       if (
         weekOpeningTime &&
@@ -30,9 +32,9 @@ class Restaurant extends Model {
         weekendClosingTime
       ) {
         restaurant.schedules =
-          `De Segunda à Sexta das ${weekOpeningTime}h as` +
-          ` ${weekClosingTime}h e de Sábado à Domingo das ${weekendOpeningTime}h` +
-          ` as ${weekendClosingTime}h`;
+          `De Segunda à Sexta das ${weekOpeningTime}h as ` +
+          `${weekClosingTime}h e de Sábado à Domingo das ${weekendOpeningTime}h` +
+          ` as ${weekClosingTime}h`;
       }
     });
 

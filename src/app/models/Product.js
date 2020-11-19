@@ -8,14 +8,31 @@ class Product extends Model {
         price: Sequelize.STRING,
         category: Sequelize.STRING,
         promotion: Sequelize.VIRTUAL,
-        description: Sequelize.STRING,
-        day_week: Sequelize.ARRAY(Sequelize.STRING),
-        promotion_schedules: Sequelize.ARRAY(Sequelize.STRING),
+        description: Sequelize.VIRTUAL,
+        promotional_price: Sequelize.STRING,
+        day_week: Sequelize.VIRTUAL(Sequelize.ARRAY(Sequelize.STRING)),
+        promotion_schedules: Sequelize.STRING,
+        promotion_start_time: Sequelize.STRING,
+        promotion_end_time: Sequelize.STRING,
       },
       {
         sequelize,
       }
     );
+
+    this.addHook('beforeSave', async (product) => {
+      const {
+        description,
+        promotional_price: promotionalPrice,
+        day_week: dayWeek,
+        promotion_start_time: promotionStartTime,
+        promotion_end_time: promotionEndTime,
+      } = product;
+
+      if (description && promotionalPrice && dayWeek) {
+        product.promotion_schedules = `${description} (${dayWeek} das ${promotionStartTime}h as ${promotionEndTime}h)`;
+      }
+    });
 
     return this;
   }

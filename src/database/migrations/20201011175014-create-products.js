@@ -25,16 +25,20 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      description: {
+      promotion_schedules: {
         type: Sequelize.STRING,
         allowNull: true,
       },
-      day_week: {
-        type: Sequelize.ARRAY(Sequelize.STRING),
+      promotional_price: {
+        type: Sequelize.STRING,
         allowNull: true,
       },
-      promotion_schedules: {
-        type: Sequelize.ARRAY(Sequelize.STRING),
+      promotion_start_time: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      promotion_end_time: {
+        type: Sequelize.STRING,
         allowNull: true,
       },
       created_at: {
