@@ -28,12 +28,10 @@ module.exports = {
       promotion: {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
-        allowNull: false,
       },
       promotion_schedules: {
         type: Sequelize.STRING,
         defaultValue: 'Não há promoção',
-        allowNull: false,
       },
       created_at: {
         type: Sequelize.DATE,
