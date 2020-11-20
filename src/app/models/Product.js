@@ -34,6 +34,12 @@ class Product extends Model {
       }
     });
 
+    this.addHook('beforeUpdate', async (product) => {
+      if (!product.promotion) {
+        product.promotion_schedules = 'Não há promoção';
+      }
+    });
+
     return this;
   }
 
