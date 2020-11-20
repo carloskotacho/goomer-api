@@ -12,13 +12,21 @@ export default async (req, res, next) => {
         is: true,
         then: Yup.string().required(),
       }),
+      promotional_price: Yup.string().when('promotion', {
+        is: true,
+        then: Yup.string().required(),
+      }),
       day_week: Yup.array(Yup.string()).when('promotion', {
         is: true,
         then: Yup.array(Yup.string()).required(),
       }),
-      promotion_schedules: Yup.array(Yup.string()).when('promotion', {
+      promotion_start_time: Yup.string().when('promotion', {
         is: true,
-        then: Yup.array(Yup.string()).required(),
+        then: Yup.string().required(),
+      }),
+      promotion_end_time: Yup.string().when('promotion', {
+        is: true,
+        then: Yup.string().required(),
       }),
     });
 
