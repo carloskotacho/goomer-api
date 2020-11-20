@@ -75,9 +75,25 @@ class RestaurantController {
       return res.status(404).json({ error: 'Restaurant not found' });
     }
 
-    const { id, name } = await restaurant.update(req.body);
+    const {
+      id,
+      name,
+      address,
+      week_opening_time,
+      week_closing_time,
+      weekend_opening_time,
+      weekend_closing_time,
+    } = await restaurant.update(req.body);
 
-    return res.json({ id, name });
+    return res.json({
+      id,
+      name,
+      address,
+      week_opening_time,
+      week_closing_time,
+      weekend_opening_time,
+      weekend_closing_time,
+    });
   }
 
   async delete(req, res) {

@@ -7,6 +7,7 @@ import ProductController from './app/controllers/ProductController';
 import FileController from './app/controllers/FileController';
 
 import validateRestaurantStore from './app/validators/RestaurantStore';
+import validateRestaurantUpdate from './app/validators/RestaurantUpdate';
 import validateProductStore from './app/validators/ProductStore';
 import validateProductUpdate from './app/validators/ProductUpdate';
 
@@ -21,7 +22,11 @@ routes.post(
   validateRestaurantStore,
   RestaurantController.store
 );
-routes.put('/api/restaurants/:id/v1', RestaurantController.update);
+routes.put(
+  '/api/restaurants/:id/v1',
+  validateRestaurantUpdate,
+  RestaurantController.update
+);
 routes.delete('/api/restaurants/:id/v1', RestaurantController.delete);
 
 routes.get('/api/products/v1', ProductController.index);
