@@ -14,6 +14,7 @@ const routes = new Router();
 const upload = multer(multerConfig);
 
 routes.get('/api/restaurants/v1', RestaurantController.index);
+routes.get('/api/restaurants/all/v1', RestaurantController.listAll);
 routes.get('/api/restaurants/:id/v1', RestaurantController.show);
 routes.post(
   '/api/restaurants/v1',
