@@ -31,6 +31,14 @@ class RestaurantController {
     return res.json(restaurants);
   }
 
+  async listAll(req, res) {
+    const restaurants = await Restaurant.findAll({
+      attributes: ['id', 'name'],
+    });
+
+    return res.json(restaurants);
+  }
+
   async show(req, res) {
     const restaurant = await Restaurant.findByPk(req.params.id, {
       attributes: {
