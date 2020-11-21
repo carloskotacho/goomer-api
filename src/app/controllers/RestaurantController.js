@@ -50,11 +50,7 @@ class RestaurantController {
       return res.status(404).json({ error: 'Restaurant not found' });
     }
 
-    return res.json({
-      name: restaurant.name,
-      address: restaurant.address,
-      schedules: restaurant.schedules,
-    });
+    return res.json(restaurant);
   }
 
   async store(req, res) {

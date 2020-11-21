@@ -15,6 +15,22 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      week_opening_time: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      week_closing_time: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      weekend_opening_time: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      weekend_closing_time: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
       schedules: {
         type: Sequelize.STRING,
         allowNull: false,

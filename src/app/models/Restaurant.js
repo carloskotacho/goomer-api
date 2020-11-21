@@ -6,10 +6,10 @@ class Restaurant extends Model {
       {
         name: Sequelize.STRING,
         address: Sequelize.STRING,
-        week_opening_time: Sequelize.VIRTUAL,
-        week_closing_time: Sequelize.VIRTUAL,
-        weekend_opening_time: Sequelize.VIRTUAL,
-        weekend_closing_time: Sequelize.VIRTUAL,
+        week_opening_time: Sequelize.STRING,
+        week_closing_time: Sequelize.STRING,
+        weekend_opening_time: Sequelize.STRING,
+        weekend_closing_time: Sequelize.STRING,
         schedules: Sequelize.STRING,
       },
       {
