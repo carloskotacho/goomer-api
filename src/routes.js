@@ -30,6 +30,7 @@ routes.put(
 routes.delete('/api/restaurants/:id/v1', RestaurantController.delete);
 
 routes.get('/api/products/v1', ProductController.index);
+routes.get('/api/products/:id/v1', ProductController.show);
 routes.get(
   '/api/products/restaurant/:id/v1',
   ProductController.findProductsByRestaurant
