@@ -46,6 +46,20 @@ class ProductController {
   }
 
   async show(req, res) {
+    const products = await Product.findByPk(req.params.id, {
+      attributes: {
+        exclude: ['createdAt', 'updatedAt'],
+      },
+    });
+
+    if (!products) {
+      return res.status(404).json({ error: 'Product not found' });
+    }
+
+    return res.json(products);
+  }
+
+  async findProductsByRestaurant(req, res) {
     const restaurantId = req.params.id;
 
     const restaurant = await Restaurant.findByPk(restaurantId, {
