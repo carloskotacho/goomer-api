@@ -29,6 +29,21 @@ module.exports = {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
       },
+      description: {
+        type: Sequelize.STRING,
+      },
+      promotional_price: {
+        type: Sequelize.STRING,
+      },
+      day_week: {
+        type: Sequelize.ARRAY(Sequelize.STRING),
+      },
+      promotion_start_time: {
+        type: Sequelize.STRING,
+      },
+      promotion_end_time: {
+        type: Sequelize.STRING,
+      },
       promotion_schedules: {
         type: Sequelize.STRING,
         defaultValue: 'Não há promoção',
