@@ -45,7 +45,9 @@ class ProductController {
     return res.json(products);
   }
 
-  async show(req, res) {
+  async show(req, res) {}
+
+  async findProductsByRestaurant(req, res) {
     const restaurantId = req.params.id;
 
     const restaurant = await Restaurant.findByPk(restaurantId, {
