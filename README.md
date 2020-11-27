@@ -26,14 +26,6 @@
  <a href="#user-content--licença">Licença</a>
 </p>
 
-## ➤ Layout
-
-O layout da aplicação está disponível no Figma:
-
-<a href="#">
-  <img alt="Made by carloshk" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361?style=flat-square&logo=figma">
-</a>
-
 ## ➤ Sobre o projeto
 
 ### Instruções
@@ -71,12 +63,6 @@ O layout da aplicação está disponível no Figma:
         - [x] Descrição para a promoção do produto (ex.: Chopp pela metade do preço)
         - [x] Preço promocional
         - [x] Dias da semana e o horário em que o produto deve estar em promoção
-
-### ➤ Web
-
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <!--img alt="goomer" title="Login" src="" width="800px"-->
-</p>
 
 ## ➤ Como executar o projeto
 
